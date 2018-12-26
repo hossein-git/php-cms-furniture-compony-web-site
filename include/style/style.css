@@ -1,0 +1,462 @@
+
+
+*,div,p,ul{
+    padding: 0px;
+    margin: 0px;
+    
+}
+body{
+    font-family: "b yekan";
+    background: #f1f1f1;
+    
+}
+
+a{
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    color: #ecf0f1;
+    padding: 0px;
+    margin: 0px;
+}
+
+li{
+    float: right;
+    list-style: none;
+}
+.allweb{
+    float: right;
+    width: 100%;
+    height: auto;
+}
+.topmenu{
+    float: left;
+    width: 100%;
+    height:auto;
+    background: #34495e;
+    
+}
+.topmenu ul, li, a {
+    margin: 0px;
+    margin-left: 0px;
+    float: left;
+    padding:10px;
+    
+}
+.topmenu a:hover{
+    background: #e74c3c;
+}
+.slider{
+    float: right;
+    width: 100%;
+    height: auto;
+    margin: 2% 0;
+}
+
+.content-werapp{
+    float: right;
+    width: 100%;
+    height: auto;
+}
+.content-box{
+    text-align: center;
+    float: right;
+    width: 30%;
+    height: 300px;
+    background: #34495e;
+    margin: 0px 2% 5px 0; 
+}
+
+.content-head{
+    padding: 6px 0;
+    background: #2c3e60;
+    font-size: 25px; 
+    color: whitesmoke;
+}
+
+.content-body{
+    float: right;
+    width: 100%;
+    height: 200%;    
+}
+.content-body img{  
+    width: 100%;
+    height: auto;  
+}
+.content-txt{
+    float: right;
+    width: 97%;
+    height: 70px;
+    margin: 0 2px;
+    font-size: 20px;
+    text-align: justify;
+    color: window;
+}
+.content-width-box{
+    float: right;
+    width: 94%;
+    height: 300px;
+    margin: 1% 2% 1% 0px;
+    background:#34495e; 
+    
+}
+.content-width-box img{
+    float: right;
+    height: 100%;
+    width: 32%;
+}
+.content-width-box-title{
+    padding: 6px 0;
+    text-align: center;
+    width: 68%;
+    height: auto;
+    background: #2c3e60;
+    font-size: 30px;
+    color: whitesmoke;
+}
+.content-width-box-txt{
+    
+    text-align: justify;
+    width: 65%;
+    height: 65%;
+    color: window;
+    font-size: 20px;
+    margin: 0% 2% ;
+    
+}
+.content-width-box-footer{
+    white-space: nowrap;
+    float: left;
+    width: auto;
+    height: auto;
+    margin: 0% 0% 1% 2%;
+    font-size: 30px;
+    background: #2c3e50;
+}
+.content-width-box-footer a:hover{
+   background: #e74c3c; 
+}
+.footer{
+    float: right;
+    height:300%;
+    width: 100%;
+    background: #34495e;
+}
+.footer-menue{
+    width: 100%;
+    height: auto;
+    float: right;
+}
+.footer-menue ul,i,a{
+    padding 10px;
+    margin: 5px;
+    font-size: 25px;
+}
+.footer-menue ul,i,a:hover{
+    padding-right: 20px;
+    background: #34380e;
+}
+.social{
+    float: right;
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+}
+.social li{
+    margin: 5px;
+}
+.footer-copyright{
+   text-align: center; 
+   font-style: italic;
+}
+
+/*** for read more page***/
+.rd-content{
+    float: right;
+    width: 95%;
+    min-height: 400px;
+    height: auto;
+    margin: 6% 2% 6% 0px;
+    background:#34495e; 
+    
+}
+.rd-content img{
+    float: right;
+    margin: 2% 2%;
+    width: 45%;
+    height: 400px;
+}
+.rd-content-title{
+    text-align: center;
+    font-size: 35px;
+    float: right;
+    width: 50%;
+    height: auto;
+    color: window;
+    margin-top: 1%;
+    background: #2c3e60;
+}
+.rd-content-txt{
+    text-align: justify;
+    width: 50%;
+    height: auto;
+    color: window;
+    font-size: 28px;
+    margin: 6% 1%;
+}
+
+
+/*******login page*********/
+.login-container{
+    float: right;
+    width: 50%;
+    height: 350px;
+    background: #B8F6FF;
+    margin: 12% 25%;
+    border: 1px solid #2CBCEE;
+      
+}
+.login-container p{
+    text-align: center;
+    color: #004F92;
+    font-size: 30px;
+    padding: 1% 0;  
+}
+.login-form{
+    margin: 2% 5%; 
+    font-size: 25px; 
+    color: #004F92;
+}
+.login-form input[type=text],[type=password]{
+    float: right;
+    width: 100%;
+    height: 34px;
+    border: 2px solid #027EE0;
+    margin: 5% 0% 4% 0%;
+    font-size: 20px; 
+}
+.login-form input[type=submit]{
+    width: 15%;
+    height: 10%;
+    border: 1px solid #B1B1B1;
+    margin: 2% 0% 0% 0%;
+    cursor: pointer; 
+    background:#5ECCFD; 
+    color: #0058A0;
+}
+.login-form input[type=submit]:hover{
+    background:#0058A0;
+    color:#5ECCFD;
+}
+.login-form a{
+    float: right;
+    background:#5ECCFD;
+    cursor: pointer;
+    color: #0058A0;
+    height: 6%;
+    padding: 10px auto;
+}
+.login-form a:hover{
+    background:#0058A0;
+    color:#5ECCFD;
+    
+}
+
+
+                        /****admin panel***/
+.admin-menue{
+    float: left;
+    width: 100%;
+    height:auto;
+    background: #0181E4;
+    margin: 0 0 5% 0;
+}
+.admin-menue ul, li, a { 
+    float: left;
+    margin: 0.1% 0%;
+}
+.admin-menue ul li:hover ul{
+	display: block;
+}
+
+.admin-menue li ul{
+	position: absolute;
+	margin: 5% 0;
+	background: #009EF9;
+	display: none;
+}
+.admin-menue a:hover{
+    background: window;
+    color: #0181E4;
+}
+.admin-welcome{
+    float: left;
+    width: 99%;
+    height: auto;
+    text-align: center;
+    margin: 1% 1%;
+    background: window;
+    color: #005195;
+    font-size: 35px;
+}
+.admin-box{
+    float: left;
+    width: 52%;
+    height: 70%;
+    background: window;
+    margin: 3% 2%;
+}
+.admin-box-title{
+    float: left;
+    font-size: 35px;
+    background: #F1F1FF;
+    color: #0181E4;
+    margin: 1% 33%;  
+}
+.admin-box-txt{
+    margin: 15% 2% 0 2%;
+    width: 95%;
+    height: 90%;
+}
+.admin-box-block{
+    margin: 2% 0.5%;
+    padding: 1% 1%;
+    background: #f1f1f1;
+    width: 98%;
+    height: auto;
+    font-size: 23px;
+    color: black;
+    cursor: pointer;
+}
+.admin-box-txt a:hover{
+    background: #0181E4;
+    color:window; 
+}
+
+.admin-inf{
+    float: right;
+    width: 40%;
+    height: 70%;
+    background: window;
+    margin: 3% 2%;       
+}
+
+.admin-inf-title{
+    float: right;
+    font-size: 30px;
+    background: #F1F1FF;
+    color: #0181E4;
+    margin: 1% 19%;
+}
+.admin-inf img{
+    width: 90%;
+    height: 50%;
+    margin: 2% 5%;
+}
+.admin-inf p{
+    font-size: 20px;
+    text-align: left;
+    margin: 0% 2%;
+    font-family: "b yekan";
+}
+
+
+                                /*****SEND POST ****/
+.sendpost-title{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 35px;
+    margin: 0% 0;
+    color: #004179;
+}
+
+.sendpost-form{
+    width: 95%;
+    height: auto;
+    margin: 3% 5%;
+}
+.sendpost-form label{
+    float: left;
+    font-size: 25px; 
+    margin: 1% 3%;
+    color :#004179;
+}
+.sendpost-form input[type=text]{
+    float: left;
+    width: 95%;
+    height: auto;
+    margin: 2% 3%;
+    font-size: 25px;
+}
+.sendpost-form textarea{
+    float: left;
+    width: 95%;
+    height: 200px;
+    margin: 2% 3%;
+    font-size: 15px;
+}
+.sendpost-form input[type=submit]{
+    float: left;
+    font-size: 25px;
+    
+    margin: 1% 3%; 
+    background: #4AC8FB;
+    color: #004179;
+}
+.sendpost-form input[type=submit]:hover{
+    background:#0058A0;
+    color:#5ECCFD;
+}
+.sendpost-form a{
+    background: #4AC8FB;
+    color: #004179;
+}
+.sendpost-form a:hover{
+    background:#0058A0;
+    color:#5ECCFD;
+}
+
+
+                    /****POST MANAGE*****/
+.table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: transparent;
+  width: 95%;
+  max-width: 100%;
+  margin: 3% 3%;
+}
+.table td{
+    text-align: left;
+    padding: 0 1%;
+    background-color: #fff ;
+    border: 2px solid #40BAE9 ;
+}
+.first-row{
+    border: 2px solid #0778DE;
+    height: auto;
+    text-align: center;
+    font-size: 25px;
+    background: #C6F3FF;
+}
+
+.table a {
+    margin: 1% 2%;
+    background: #4AC8FB;
+    color: #004179;
+}
+.table a:hover{
+    background:#0058A0;
+    color:#5ECCFD;
+}
+ 
+
+                    /******SETTING *****/
+.set-container{
+    float: right;
+    width: auto;
+    height: auto;
+    background: white;
+    margin: 1% 5%;
+}
+
