@@ -41,12 +41,12 @@
                 <p3>Admin Information</p3>
                 <hr>    
             </div><!--admin-inf-title-->
-            <img src="../images/perosnal.png">
+            <img src="../include/images/perosnal.png">
             
                 <p>Full Name: hossein hagh</p><br>
                 <p>Age: 25</p><br>
                 <p>Username: hossein</p><br>
-                <p>Password: 1234</p>
+                <p>Password: admin</p>
             
         </div><!--admin-inf-->
 
