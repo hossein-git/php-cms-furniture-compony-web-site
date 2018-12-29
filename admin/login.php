@@ -2,36 +2,62 @@
     session_start();
     session_unset();
     session_destroy();
+    include_once '../lib/db.php';
+    include_once '../lib/tabels.php';
 ?>
 
 <html>
     <head>
         <title>login page</title>
-        <link rel="stylesheet" href="../include/style/style.css">
+        <link rel="stylesheet" href="../include/style/bootstrap.css">
+        <style>
+            #login{
+                float: right;
+                width: 60%;
+                height: auto;
+                margin: 10% 20%;
+                border: 1px solid #005cbf;
+                padding: 0 5%;
+                background: #99d4ff;     
+            }              
+        </style>
     </head>
     <body>
-        <div class="login-container">
-            <p>login panel</p> 
-            <hr>
+        <div class="" id="login">
+            <h3 style="text-align: center">Admin login:</h3>
+            <hr><br>
+            <h4 style="text-align: center;">
             <!-- to add error massages by using get method -->
         <?php if(isset($_GET['empty'])){
-            echo '<center><font style="color: red;font-size:25px"> All fields are requird</center>';
+            echo '<p style="color: red;font-size:25px"> All fields are requird</p>';
         } 
         if(isset($_GET['error'])){
-            echo '<center><font style="color: red;font-size:25px"> userame or password is incorrect</center>';
+            echo '<p style="color: red;font-size:25px"> userame or password is incorrect</p>';
         } 
         ?>
+            </h4>    
             
-            <div class="login-form">
                 <form action="../lib/check.php" method="POST"> 
-                <label for="username">User Name:</label>
-                <input type="text" name="username" id="username"  placeholder="username"><br>
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" placeholder="password"><br>
-                <input type="submit" name="login">
-                <a href="index.php">back to home</a>
+                    
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Username:</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="username" class="form-control" id="inputEmail3" placeholder="username">
+                    </div>
+                </div>
+                    
+                <div class="form-group row">
+                  <label for="inputPassword3" class="col-sm-2 col-form-label">Password:</label>
+                  <div class="col-sm-10">
+                    <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+                </div><br> <br>
+                <div class="form-group">    
+                    <input type="submit" class="btn btn-primary" name="login" value="login">
+                    <a class="btn btn-success" href="../index.php">back to home</a>
+                </div>
                 </form>  
-            </div>
+            
         </div><!--login-container-->
 
     </body>

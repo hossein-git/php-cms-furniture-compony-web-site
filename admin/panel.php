@@ -1,55 +1,66 @@
 <?php 
     require_once "menu.php"; 
 
-?>
+?>   
+        <div class="container"> 
+            <h3 style="text-align: center">
+                Welcome Admin
+            </h3><hr>
         
-        <div class="admin-welcome">
-            <p>Welcome Admin</p>
-        </div><!--admin-welcome-->
-        
-        <div class="admin-box">
-            <div class="admin-box-title">
-                <p>last posts</p>
+            <div class="content-box text-center" style="float: left;">
+                <h4 class="text-center">last posts</h4>
                 <hr>   
-            </div><!--admin-box-title-->
-            <div class="admin-box-txt">
+            
+            <div class="content-txt">
                 <ul>
-                    <a class="admin-box-block">
-                        <p>this is page title</p>
-                    </a><!--admin-box-block-->
-                    <a class="admin-box-block">
-                        <p>this is page title</p>
-                    </a><!--admin-box-block-->
-                    <a class="admin-box-block">
-                        <p>this is page title</p>
-                    </a><!--admin-box-block-->
-                    <a class="admin-box-block">
-                        <p>this is page title</p>
-                    </a><!--admin-box-block-->
-                    <a class="admin-box-block">
-                        <p>this is page title</p>
-                    </a><!--admin-box-block-->
-                    <a class="admin-box-block">
-                        <p>this is page title</p>
-                    </a><!--admin-box-block-->
+            <?php
+            $query = "SELECT * FROM post ORDER BY id DESC";
+            $statment = $pdo->query($query);
+            while($row =$statment->fetch(PDO::FETCH_ASSOC)):  
+            ?>         
+                <a href="../read-more.php?postid=<?php echo $row['id']; ?>" class="btn btn-light btn-lg btn-block">
+                    <p style="width: 20rem;"><?php echo $row['title']; ?></p>
+                </a><!--admin-box-block-->
+                    
+            <?php endwhile; ?> 
+                    
                 </ul> 
             </div><!--admin-box-txt-->
         </div><!--admin-box-->
         
-        <div class="admin-inf">
-            <div class="admin-inf-title">
-                <p3>Admin Information</p3>
-                <hr>    
-            </div><!--admin-inf-title-->
-            <img src="../include/images/perosnal.png">
+        <div class="content-txt" style="float: right;">
+            <?php
+            if (!isset($_GET['id'])){
+                
             
-                <p>Full Name: hossein hagh</p><br>
-                <p>Age: 25</p><br>
-                <p>Username: hossein</p><br>
-                <p>Password: admin</p>
+            }
+            $admin_id = $_SESSION['admin_id'];
+            
+            $sql = "SELECT * FROM admin WHERE id = $admin_id";
+            $state = $pdo->query($sql);
+            $row_i =$state->fetch(PDO::FETCH_ASSOC);
+            ?>  
+            <div class="card" style="width: 22rem;">
+                <img src="<?php echo $row_i['img'];?>" class="card-img-top" >
+                <div class="card-body">
+                  <h5 class="card-title text-center">Admin information:</h5>
+                  <p class="card-text"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    
+                    <li class="list-group-item h6">Full Name:<span style="color: brown"><?php echo $row_i['f_name'];?></span></li>
+                  <li class="list-group-item h6">Age:<span style="color: brown"> <?php echo $row_i['age'];?></span></li>
+                  <li class="list-group-item h6">Username:<span style="color: brown"> <?php echo $row_i['username'];?></span></li>
+                      <li class="list-group-item h6">Password: <span style="color: brown"><?php echo $row_i['password'];?></span></li>
+                </ul>
+                <!--div class="card-body">
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div-->
+            </div>
             
         </div><!--admin-inf-->
-
+        </div><!--container-->
 </body>
 </html>
 
