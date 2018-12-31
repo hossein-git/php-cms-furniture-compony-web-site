@@ -8,7 +8,7 @@
             $row_i =$state->fetch(PDO::FETCH_ASSOC);
             $username = $row_i['username'];
     if (!$_SESSION['username'] == sha1("$username")){
-    header("location:http://localhost/mobl/index.php");
+    header("location:".home_url."mobl/index.php");
     die(); 
 }
 ?>
@@ -17,7 +17,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="../include/style/bootstrap.css">
-                <title>Post mange</title>
+                <title>admin panel</title>
     </head>
     
     <body style="background-color: transparent;">
@@ -79,7 +79,7 @@
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" href="login.php">Log out</a>
+              <a class="nav-link btn-danger" href="login.php">Log out</a>
             </li>
             
             

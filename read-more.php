@@ -4,23 +4,16 @@
     $query = "SELECT * FROM post WHERE id = $postid";
     $statment = $pdo->query($query);
     while($row =$statment->fetch(PDO::FETCH_ASSOC)):
-?>
-    <body>
-        <div class="allweb">
-            
-            <div class="allweb">
-                <div class="rd-content">
-                    <img src="<?php echo $row['src']; ?>">
-                    <div class="rd-content-title">
-                        <p><?php echo $row['title']; ?></p>
-                    </div><!-- rd-content-title-->
-                    <div class="rd-content-txt">
-                        <?php echo $row['content']; ?>
-                    </div><!--rd-content-txt-->
-                </div><!--rd-content-->
-                
-            </div><!--allweb-->
-            
+        ?>  
+    <div class="container-fluid">
+        <div class="card mb-3" style="width:100%">
+            <img src="<?php echo $row['src']; ?>" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title"><?php echo $row['title'];?></h5>
+              <p class="card-text"><?php echo $row['content']; ?></p>
+            </div>
+        </div>
+    </div>        
             
 <?php endwhile; include_once 'footer.php'; ?>  
 

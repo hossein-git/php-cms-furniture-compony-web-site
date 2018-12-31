@@ -7,12 +7,10 @@
         $statment = $pdo->query($query);
         while($row =$statment->fetch(PDO::FETCH_ASSOC)): 
                 ?>
-                <li><img src="<?php echo $row['src'] ?>" alt="<?php echo $row['title'] ?>"  title="<?php echo $row['title'] ?>" />
+                <li><img src="<?php echo $row['link'] ?>" alt="<?php echo $row['title'] ?>"  title="<?php echo $row['title'] ?>" />
                 </li>
         <?php endwhile; ?>        
             </ul>
-
-
         </div>
     </div>
 </div>

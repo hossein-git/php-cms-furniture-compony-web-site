@@ -5,9 +5,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
         <link rel="stylesheet" href="include/style/style.css">
         <link rel="stylesheet" href="include/style/bootstrap.css">
-        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 
         <!-- slider properties -->
         <script src="include/sliderengine/jquery.js"></script>
@@ -18,20 +18,19 @@
 
         <title>funiture</title>
     </head>
-    <body>
-        <div class="allweb">
+    <body class="">
             <div class="topmenu">
                 <ul>
-
     <?php 
     $sql = "SELECT * FROM menu ";
     $statment = $pdo->query($sql);
+    
     while ($row = $statment->fetch(PDO::FETCH_ASSOC)):
-    ?>
-                    <li><a class="btn btn-lg btn-light" href="<?php echo $row['link'] ?>" ><?php echo $row['title'] ?></a></li>
-    <?php endwhile; ?>     
+    ?>  
+            <li><a class="btn btn-light" href="<?php echo $row['link'] ?>" ><?php echo $row['title'] ?></a></li>
+    
+    <?php endwhile; ?>
                 </ul> 
-                
             </div>
-           
-            
+        <div class="container-fluid" style="background: #f1f1f1">
+            <br/><br><br><br>

@@ -1,4 +1,3 @@
-
     <div class="content-werapp">
         <?php 
         $i = 0 ;
@@ -10,18 +9,15 @@
             break;
         }
         ?>
-
-        <div class="content-box">
-            <div class="content-head">
+        <div class=" content-box card " style="width: 15rem;height:20rem; float: right;">
+            <div class="" style="">
+                <div class="card-header" style="font-size:1.25rem;">
                 <p><?php echo  $row['title'];?></p> 
             </div><!--content-head-->
-            <div class="content-body">
-                <img src="<?php echo $row['src']; ?>">
-                <div class="content-txt" style="font-size: 18px">
-                    <P><?php echo $row['content']; ?></p>
-                
-                </div>
+                <img class="card-img" src="<?php echo $row['src']; ?>" >
+                <P class="card-text" style="font-size: 1rem"><?php echo $row['content']; ?></p>
             </div><!--content-body-->
-        </div><!--content-box-->
-        
+        <!--content-box-->
+        </div>
         <?php endwhile; ?>
+    </div><br><br>

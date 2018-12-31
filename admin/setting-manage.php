@@ -12,13 +12,10 @@ include_once 'menu.php';
     if(isset($_GET['menudelfaild']) or isset($_GET['postfaild'])){
         echo '<p style="color: red;font-size:25px"> error ocured during operation</p>';
         }
-
     $mnu = "SELECT * FROM menu ";
     $statment = $pdo->query($mnu);
-    
 ?>        
         </h4><br> 
-        
         <table class="table table-bordered table-hover">
         
             <thead class="table-primary" style="font-size: 20px;text-align: center;">
@@ -38,11 +35,9 @@ include_once 'menu.php';
                 <td style="text-align:center">
                     <a class="btn btn-lg btn-danger" href="../lib/check.php?menudel=<?php echo $row_mnu['id']; ?>">Delete</a>
                 </td>   
-            </tr>
-            
+            </tr> 
         <?php
-            endwhile; ?>
-         
+            endwhile; ?>   
     </table>
 </div><br>
         
@@ -57,15 +52,11 @@ include_once 'menu.php';
     if(isset($_GET['footerdelfaild']) or isset($_GET['postfaild'])){
         echo '<p style="color: red;font-size:25px"> error ocured during operation</p>';
         }
-
     $footer = "SELECT * FROM footer ";
     $statment_footer = $pdo->query($footer);
-    
 ?>        
         </h4><br> 
-        
         <table class="table table-bordered table-hover">
-        
             <thead class="table-primary" style="font-size: 20px;text-align: center;">
                 <tr>
                   <th scope="col">Title</th>
@@ -83,15 +74,11 @@ include_once 'menu.php';
                 <td style="text-align:center">
                     <a class="btn btn-lg btn-danger" href="../lib/check.php?footerdel=<?php echo $row_footer['id']; ?>">Delete</a>
                 </td>   
-            </tr>
-            
+            </tr>   
         <?php
             endwhile; ?>
-         
         </table>
     </div><br>      
-    
-
     <div class="container">
         <h3 style="text-align: center">Manage Slider:</h3>
         <hr><br>
@@ -103,10 +90,8 @@ include_once 'menu.php';
     if(isset($_GET['sliderdelfaild']) or isset($_GET['postfaild'])){
         echo '<p style="color: red;font-size:25px"> error ocured during operation</p>';
         }
-
     $slider = "SELECT * FROM slider ";
     $statment_slider = $pdo->query($slider);
-    
 ?>        
         </h4><br> 
         
@@ -124,20 +109,16 @@ include_once 'menu.php';
         <tr class="table-light"> 
                 <td> <a class="" ><?php echo $row_slider['title']; ?></a>
                 </td>
-                <td> <a href="<?php echo $row_slider['src']; ?> "class=""><?php echo $row_slider['src']; ?></a>
+                <td> <a href="<?php echo $row_slider['link']; ?> "class=""><?php echo $row_slider['link']; ?></a>
                 </td>
                 <td style="text-align:center">
                     <a class="btn btn-lg btn-danger" href="../lib/check.php?sliderdel=<?php echo $row_slider['id']; ?>">Delete</a>
                 </td>   
             </tr>
-            
         <?php
             endwhile; ?>
-         
         </table>
-    </div>      
-        
-        
+    </div>            
 </body>
 </html>
 

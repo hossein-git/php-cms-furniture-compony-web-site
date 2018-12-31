@@ -1,17 +1,13 @@
 <?php 
-    require_once "menu.php"; 
-
-?>   
+    require_once "menu.php"; ?>   
         <div class="container"> 
             <h3 style="text-align: center">
                 Welcome Admin
             </h3><hr>
-        
-            <div class="content-box text-center" style="float: left;">
+            <div class="content-box text-center" style="float: left;width: 19rem;">
                 <h4 class="text-center">last posts</h4>
                 <hr>   
-            
-            <div class="content-txt">
+            <div class="content-box">
                 <ul>
             <?php
             $query = "SELECT * FROM post ORDER BY id DESC";
@@ -19,7 +15,7 @@
             while($row =$statment->fetch(PDO::FETCH_ASSOC)):  
             ?>         
                 <a href="../read-more.php?postid=<?php echo $row['id']; ?>" class="btn btn-light btn-lg btn-block">
-                    <p style="width: 20rem;"><?php echo $row['title']; ?></p>
+                    <p style=""><?php echo $row['title']; ?></p>
                 </a><!--admin-box-block-->
                     
             <?php endwhile; ?> 
@@ -30,17 +26,12 @@
         
         <div class="content-txt" style="float: right;">
             <?php
-            if (!isset($_GET['id'])){
-                
-            
-            }
-            $admin_id = $_SESSION['admin_id'];
-            
+            $admin_id = $_SESSION['admin_id']; 
             $sql = "SELECT * FROM admin WHERE id = $admin_id";
             $state = $pdo->query($sql);
             $row_i =$state->fetch(PDO::FETCH_ASSOC);
             ?>  
-            <div class="card" style="width: 22rem;">
+            <div class="card" style="width: 19rem;">
                 <img src="<?php echo $row_i['img'];?>" class="card-img-top" >
                 <div class="card-body">
                   <h5 class="card-title text-center">Admin information:</h5>

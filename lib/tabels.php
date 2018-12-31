@@ -11,7 +11,7 @@ $menu = ("
 $slider = ("
                 CREATE TABLE IF NOT EXISTS slider (
                         id INTEGER PRIMARY KEY AUTO_INCREMENT,
-                        src TEXT NOT NULL,
+                        title TEXT NOT NULL,
                         link TEXT NOT NULL
                     )
                 ");
